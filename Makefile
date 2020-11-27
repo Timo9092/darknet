@@ -98,8 +98,8 @@ endif
 ifeq ($(CUDNN), 1)
 COMMON+= -DCUDNN
 ifeq ($(OS),Darwin) #MAC
-CFLAGS+= -DCUDNN -I/usr/local/cuda/include
-LDFLAGS+= -L/usr/local/cuda/lib -lcudnn
+CFLAGS+= -DCUDNN -I/usr/local/cuda-8.0/include
+LDFLAGS+= -L/usr/local/cuda-8.0/lib -lcudnn
 else
 CFLAGS+= -DCUDNN -I/usr/local/cudnn/include
 LDFLAGS+= -L/usr/local/cudnn/lib64 -lcudnn
